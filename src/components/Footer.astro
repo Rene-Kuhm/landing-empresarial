@@ -1,0 +1,210 @@
+---
+import { Icon } from '@lucide/astro';
+
+const currentYear = new Date().getFullYear();
+---
+
+<footer class="bg-gray-900 text-white">
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <!-- Main footer content -->
+    <div class="py-16">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        
+        <!-- Company info -->
+        <div class="lg:col-span-1">
+          <div class="flex items-center space-x-2 mb-6">
+            <Icon name="Code" class="h-8 w-8 text-blue-400" />
+            <span class="text-2xl font-bold">DevAgency</span>
+          </div>
+          <p class="text-gray-300 mb-6 leading-relaxed">
+            Transformamos ideas en soluciones digitales innovadoras. 
+            Tu éxito es nuestra misión.
+          </p>
+          <div class="flex space-x-4">
+            <a href="#" class="text-gray-400 hover:text-blue-400 transition-colors" aria-label="GitHub">
+              <Icon name="Github" class="h-6 w-6" />
+            </a>
+            <a href="#" class="text-gray-400 hover:text-blue-400 transition-colors" aria-label="LinkedIn">
+              <Icon name="Linkedin" class="h-6 w-6" />
+            </a>
+            <a href="#" class="text-gray-400 hover:text-blue-400 transition-colors" aria-label="Twitter">
+              <Icon name="Twitter" class="h-6 w-6" />
+            </a>
+            <a href="#" class="text-gray-400 hover:text-blue-400 transition-colors" aria-label="Email">
+              <Icon name="Mail" class="h-6 w-6" />
+            </a>
+          </div>
+        </div>
+
+        <!-- Services -->
+        <div>
+          <h3 class="text-lg font-semibold mb-6">Servicios</h3>
+          <ul class="space-y-3">
+            <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Desarrollo Web</a></li>
+            <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Apps Móviles</a></li>
+            <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Backend & APIs</a></li>
+            <li><a href="#" class="text-gray-300 hover:text-white transition-colors">DevOps & Cloud</a></li>
+            <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Consultoría</a></li>
+          </ul>
+        </div>
+
+        <!-- Company -->
+        <div>
+          <h3 class="text-lg font-semibold mb-6">Empresa</h3>
+          <ul class="space-y-3">
+            <li><a href="#nosotros" class="text-gray-300 hover:text-white transition-colors">Nosotros</a></li>
+            <li><a href="#proyectos" class="text-gray-300 hover:text-white transition-colors">Proyectos</a></li>
+            <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Testimonios</a></li>
+            <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Blog</a></li>
+            <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Carreras</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact -->
+        <div>
+          <h3 class="text-lg font-semibold mb-6">Contacto</h3>
+          <ul class="space-y-4">
+            <li class="flex items-start space-x-3">
+              <Icon name="MapPin" class="h-5 w-5 text-blue-400 mt-1 flex-shrink-0" />
+              <span class="text-gray-300">Madrid, España<br />Barcelona, España</span>
+            </li>
+            <li class="flex items-center space-x-3">
+              <Icon name="Phone" class="h-5 w-5 text-blue-400 flex-shrink-0" />
+              <a href="tel:+34900123456" class="text-gray-300 hover:text-white transition-colors">
+                +34 900 123 456
+              </a>
+            </li>
+            <li class="flex items-center space-x-3">
+              <Icon name="Mail" class="h-5 w-5 text-blue-400 flex-shrink-0" />
+              <a href="mailto:hola@devagency.es" class="text-gray-300 hover:text-white transition-colors">
+                hola@devagency.es
+              </a>
+            </li>
+          </ul>
+          
+          <!-- Newsletter -->
+          <div class="mt-8">
+            <h4 class="text-sm font-semibold mb-3 text-gray-200">Suscríbete a nuestro newsletter</h4>
+            <form class="flex">
+              <input 
+                type="email" 
+                placeholder="tu@email.com"
+                class="flex-1 px-4 py-2 rounded-l-lg bg-gray-800 border border-gray-700 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                required
+              />
+              <button 
+                type="submit"
+                class="px-4 py-2 bg-blue-600 hover:bg-blue-700 rounded-r-lg transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-gray-900"
+                aria-label="Suscribirse"
+              >
+                <Icon name="Send" class="h-5 w-5" />
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom footer -->
+    <div class="border-t border-gray-800 py-8">
+      <div class="md:flex md:items-center md:justify-between">
+        <div class="text-center md:text-left">
+          <p class="text-gray-400">
+            © {currentYear} DevAgency. Todos los derechos reservados.
+          </p>
+        </div>
+        <div class="mt-4 md:mt-0 flex justify-center md:justify-end space-x-6">
+          <a href="/privacidad" class="text-gray-400 hover:text-white text-sm transition-colors">
+            Política de Privacidad
+          </a>
+          <a href="/terminos" class="text-gray-400 hover:text-white text-sm transition-colors">
+            Términos de Uso
+          </a>
+          <a href="/cookies" class="text-gray-400 hover:text-white text-sm transition-colors">
+            Cookies
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Back to top button -->
+  <button 
+    id="back-to-top"
+    class="fixed bottom-8 right-8 bg-blue-600 hover:bg-blue-700 text-white p-3 rounded-full shadow-lg transition-all duration-300 opacity-0 invisible"
+    aria-label="Volver arriba"
+  >
+    <Icon name="ArrowUp" class="h-6 w-6" />
+  </button>
+</footer>
+
+<script>
+  // Newsletter form submission
+  document.addEventListener('DOMContentLoaded', () => {
+    const form = document.querySelector('footer form');
+    if (form) {
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const email = (e.target as HTMLFormElement).querySelector('input[type="email"]') as HTMLInputElement;
+        if (email && email.value) {
+          // Here you would typically send the email to your backend
+          alert('¡Gracias por suscribirte! Te contactaremos pronto.');
+          email.value = '';
+        }
+      });
+    }
+
+    // Back to top button functionality
+    const backToTop = document.getElementById('back-to-top');
+    if (backToTop) {
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 400) {
+          backToTop.classList.remove('opacity-0', 'invisible');
+          backToTop.classList.add('opacity-100', 'visible');
+        } else {
+          backToTop.classList.remove('opacity-100', 'visible');
+          backToTop.classList.add('opacity-0', 'invisible');
+        }
+      });
+
+      backToTop.addEventListener('click', () => {
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth'
+        });
+      });
+    }
+  });
+</script>
+
+<style>
+  /* Smooth transitions for footer links */
+  footer a {
+    position: relative;
+  }
+  
+  footer a:hover {
+    text-decoration: none;
+  }
+  
+  /* Custom focus styles */
+  footer input:focus,
+  footer button:focus {
+    outline: none;
+  }
+  
+  /* Back to top button animation */
+  #back-to-top {
+    transform: translateY(0);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  #back-to-top:hover {
+    transform: translateY(-2px);
+  }
+  
+  #back-to-top.opacity-0 {
+    transform: translateY(10px);
+  }
+</style>

@@ -1,0 +1,223 @@
+---
+import { Icon } from '@lucide/astro';
+
+const services = [
+  {
+    icon: 'Globe',
+    title: 'Desarrollo Web Frontend',
+    description:
+      'Interfaces modernas y responsivas con React, Next.js, Astro y las últimas tecnologías.',
+    features: [
+      'React & Next.js',
+      'TypeScript',
+      'Tailwind CSS',
+      'Responsive Design',
+    ],
+    color: 'blue',
+  },
+  {
+    icon: 'Server',
+    title: 'Desarrollo Backend & APIs',
+    description:
+      'APIs robustas y escalables con Node.js, Python, y bases de datos optimizadas.',
+    features: [
+      'Node.js & Express',
+      'Python & FastAPI',
+      'PostgreSQL & MongoDB',
+      'Microservicios',
+    ],
+    color: 'purple',
+  },
+  {
+    icon: 'Smartphone',
+    title: 'Aplicaciones Móviles',
+    description:
+      'Apps nativas e híbridas para iOS y Android con React Native y Flutter.',
+    features: [
+      'React Native',
+      'Flutter',
+      'iOS & Android',
+      'Push Notifications',
+    ],
+    color: 'green',
+  },
+  {
+    icon: 'Cloud',
+    title: 'DevOps & Cloud',
+    description:
+      'Infraestructura en la nube, CI/CD, y despliegues automatizados.',
+    features: [
+      'AWS & Azure',
+      'Docker & Kubernetes',
+      'CI/CD Pipelines',
+      'Monitoreo',
+    ],
+    color: 'orange',
+  },
+  {
+    icon: 'Zap',
+    title: 'Optimización Performance',
+    description:
+      'Mejoramos la velocidad y rendimiento de aplicaciones existentes.',
+    features: ['Core Web Vitals', 'SEO Técnico', 'Code Splitting', 'Caching'],
+    color: 'red',
+  },
+  {
+    icon: 'Headphones',
+    title: 'Soporte & Mantenimiento',
+    description:
+      'Soporte técnico 24/7 y mantenimiento continuo de tus aplicaciones.',
+    features: ['Soporte 24/7', 'Actualizaciones', 'Monitoreo', 'Backup'],
+    color: 'indigo',
+  },
+];
+
+const colorClasses = {
+  blue: {
+    bg: 'bg-blue-50',
+    icon: 'text-blue-600',
+    border: 'hover:border-blue-200',
+    gradient: 'from-blue-600 to-blue-700',
+  },
+  purple: {
+    bg: 'bg-purple-50',
+    icon: 'text-purple-600',
+    border: 'hover:border-purple-200',
+    gradient: 'from-purple-600 to-purple-700',
+  },
+  green: {
+    bg: 'bg-green-50',
+    icon: 'text-green-600',
+    border: 'hover:border-green-200',
+    gradient: 'from-green-600 to-green-700',
+  },
+  orange: {
+    bg: 'bg-orange-50',
+    icon: 'text-orange-600',
+    border: 'hover:border-orange-200',
+    gradient: 'from-orange-600 to-orange-700',
+  },
+  red: {
+    bg: 'bg-red-50',
+    icon: 'text-red-600',
+    border: 'hover:border-red-200',
+    gradient: 'from-red-600 to-red-700',
+  },
+  indigo: {
+    bg: 'bg-indigo-50',
+    icon: 'text-indigo-600',
+    border: 'hover:border-indigo-200',
+    gradient: 'from-indigo-600 to-indigo-700',
+  },
+};
+---
+
+<section id="servicios" class="py-20 bg-gray-50">
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- Section Header -->
+    <div class="text-center max-w-3xl mx-auto mb-16">
+      <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+        Servicios que
+        <span class="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+          potencian
+        </span>
+        tu negocio
+      </h2>
+      <p class="text-xl text-gray-600 leading-relaxed">
+        Ofrecemos soluciones completas de desarrollo web y mobile, desde la conceptualización 
+        hasta el despliegue y mantenimiento.
+      </p>
+    </div>
+
+    <!-- Services Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {services.map((service, index) => {
+        const colors = colorClasses[service.color as keyof typeof colorClasses];
+        return (
+          <div class={`group relative bg-white rounded-2xl p-8 shadow-sm border border-gray-200 ${colors.border} hover:shadow-xl transition-all duration-300 hover:-translate-y-2`}>
+            <!-- Icon -->
+            <div class={`inline-flex items-center justify-center w-16 h-16 rounded-xl ${colors.bg} mb-6 group-hover:scale-110 transition-transform duration-300`}>
+              <Icon name={service.icon} class={`h-8 w-8 ${colors.icon}`} />
+            </div>
+
+            <!-- Content -->
+            <h3 class="text-xl font-bold text-gray-900 mb-4">
+              {service.title}
+            </h3>
+            
+            <p class="text-gray-600 mb-6 leading-relaxed">
+              {service.description}
+            </p>
+
+            <!-- Features -->
+            <ul class="space-y-2 mb-8">
+              {service.features.map((feature) => (
+                <li class="flex items-center text-sm text-gray-600">
+                  <Icon name="Check" class="h-4 w-4 text-green-500 mr-3 flex-shrink-0" />
+                  {feature}
+                </li>
+              ))}
+            </ul>
+
+            <!-- CTA -->
+            <div class="mt-auto">
+              <button class={`w-full bg-gradient-to-r ${colors.gradient} text-white font-semibold py-3 px-6 rounded-xl hover:shadow-lg transform hover:scale-105 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500`}>
+                Más Información
+                <Icon name="ArrowRight" class="inline-block ml-2 h-4 w-4" />
+              </button>
+            </div>
+
+            <!-- Decorative element -->
+            <div class="absolute top-4 right-4 opacity-10">
+              <Icon name={service.icon} class="h-16 w-16 text-gray-400" />
+            </div>
+          </div>
+        );
+      })}
+    </div>
+
+    <!-- Bottom CTA -->
+    <div class="text-center mt-16">
+      <div class="bg-white rounded-2xl p-8 shadow-sm border border-gray-200 max-w-2xl mx-auto">
+        <h3 class="text-2xl font-bold text-gray-900 mb-4">
+          ¿No encuentras lo que buscas?
+        </h3>
+        <p class="text-gray-600 mb-6">
+          Creamos soluciones personalizadas para cada cliente. Cuéntanos tu proyecto 
+          y encontraremos la mejor manera de ayudarte.
+        </p>
+        <a href="#contacto" 
+           class="inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-xl hover:shadow-lg transform hover:scale-105 transition-all duration-200">
+          Consulta Personalizada
+          <Icon name="MessageCircle" class="ml-2 h-5 w-5" />
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  /* Service cards animation on scroll */
+  .group {
+    animation: fadeInUp 0.6s ease-out;
+    animation-fill-mode: both;
+  }
+
+  .group:nth-child(1) { animation-delay: 0.1s; }
+  .group:nth-child(2) { animation-delay: 0.2s; }
+  .group:nth-child(3) { animation-delay: 0.3s; }
+  .group:nth-child(4) { animation-delay: 0.4s; }
+  .group:nth-child(5) { animation-delay: 0.5s; }
+  .group:nth-child(6) { animation-delay: 0.6s; }
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(40px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+</style>

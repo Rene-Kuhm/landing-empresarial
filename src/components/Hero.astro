@@ -1,0 +1,175 @@
+---
+import { Icon } from '@lucide/astro';
+---
+
+<section class="relative pt-20 pb-16 lg:pt-24 lg:pb-20 overflow-hidden">
+  <!-- Background gradient -->
+  <div class="absolute inset-0 bg-gradient-to-br from-blue-50 via-white to-purple-50"></div>
+  
+  <!-- Background decorative elements -->
+  <div class="absolute top-0 left-0 right-0 h-full overflow-hidden">
+    <div class="absolute top-10 left-10 w-72 h-72 bg-blue-400/10 rounded-full mix-blend-multiply filter blur-xl animate-pulse"></div>
+    <div class="absolute top-0 right-10 w-72 h-72 bg-purple-400/10 rounded-full mix-blend-multiply filter blur-xl animate-pulse animation-delay-2s"></div>
+    <div class="absolute -bottom-8 left-20 w-72 h-72 bg-pink-400/10 rounded-full mix-blend-multiply filter blur-xl animate-pulse animation-delay-4s"></div>
+  </div>
+
+  <div class="relative container mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="lg:grid lg:grid-cols-12 lg:gap-8 items-center">
+      
+      <!-- Content -->
+      <div class="lg:col-span-6">
+        <div class="text-center lg:text-left">
+          <!-- Badge -->
+          <div class="inline-flex items-center px-4 py-2 rounded-full bg-blue-100 text-blue-800 text-sm font-medium mb-6 animate-fade-in-up">
+            <Icon name="Sparkles" class="w-4 h-4 mr-2" />
+            Tecnología de vanguardia
+          </div>
+
+          <!-- Heading -->
+          <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight mb-6 animate-fade-in-up animation-delay-300ms">
+            Desarrollamos 
+            <span class="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+              soluciones digitales
+            </span>
+            que transforman tu negocio
+          </h1>
+
+          <!-- Description -->
+          <p class="text-xl text-gray-600 mb-8 max-w-2xl animate-fade-in-up animation-delay-600ms">
+            Creamos aplicaciones web modernas, escalables y optimizadas que impulsan el crecimiento de tu empresa. 
+            Con tecnologías de última generación y un enfoque centrado en resultados.
+          </p>
+
+          <!-- CTA Buttons -->
+          <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start animate-fade-in-up animation-delay-900ms">
+            <a href="#contacto" 
+               class="inline-flex items-center px-8 py-4 border border-transparent text-lg font-medium rounded-full text-white bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+              Iniciar Proyecto
+              <Icon name="ArrowRight" class="ml-2 -mr-1 h-5 w-5" />
+            </a>
+            
+            <a href="#proyectos" 
+               class="inline-flex items-center px-8 py-4 border-2 border-gray-300 text-lg font-medium rounded-full text-gray-700 bg-white hover:bg-gray-50 hover:border-gray-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500 transition-all duration-300">
+              Ver Proyectos
+              <Icon name="Eye" class="ml-2 -mr-1 h-5 w-5" />
+            </a>
+          </div>
+
+          <!-- Stats -->
+          <div class="grid grid-cols-3 gap-8 mt-12 pt-8 border-t border-gray-200 animate-fade-in-up animation-delay-1200ms">
+            <div class="text-center lg:text-left">
+              <div class="text-2xl font-bold text-gray-900">50+</div>
+              <div class="text-sm text-gray-600">Proyectos Exitosos</div>
+            </div>
+            <div class="text-center lg:text-left">
+              <div class="text-2xl font-bold text-gray-900">98%</div>
+              <div class="text-sm text-gray-600">Satisfacción Cliente</div>
+            </div>
+            <div class="text-center lg:text-left">
+              <div class="text-2xl font-bold text-gray-900">24/7</div>
+              <div class="text-sm text-gray-600">Soporte Técnico</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hero Image/Graphics -->
+      <div class="mt-12 lg:mt-0 lg:col-span-6">
+        <div class="relative animate-fade-in-left animation-delay-600ms">
+          <!-- Main illustration container -->
+          <div class="relative mx-auto w-full max-w-lg">
+            <!-- Code editor mockup -->
+            <div class="bg-gray-900 rounded-xl shadow-2xl overflow-hidden transform rotate-3 hover:rotate-0 transition-transform duration-500">
+              <!-- Editor header -->
+              <div class="bg-gray-800 px-4 py-3 flex items-center space-x-2">
+                <div class="flex space-x-2">
+                  <div class="w-3 h-3 rounded-full bg-red-500"></div>
+                  <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+                  <div class="w-3 h-3 rounded-full bg-green-500"></div>
+                </div>
+                <div class="flex-1 text-center">
+                  <div class="text-gray-400 text-sm font-mono">main.tsx</div>
+                </div>
+              </div>
+              
+              <!-- Editor content -->
+              <div class="p-6 font-mono text-sm">
+                <div class="text-purple-400">import</div>
+                <div class="text-blue-400 ml-4">{ useState, useEffect }</div>
+                <div class="text-purple-400">from</div>
+                <div class="text-green-400 ml-2">'react'</div>
+                <div class="mt-3 text-yellow-400">const</div>
+                <div class="text-blue-400 ml-2">App = () => {</div>
+                <div class="text-purple-400 ml-4">return (</div>
+                <div class="text-red-400 ml-6">&lt;div&gt;</div>
+                <div class="text-white ml-8">¡Hola Mundo!</div>
+                <div class="text-red-400 ml-6">&lt;/div&gt;</div>
+                <div class="text-purple-400 ml-4">)</div>
+                <div class="text-blue-400">}</div>
+              </div>
+            </div>
+
+            <!-- Floating elements -->
+            <div class="absolute -top-4 -right-4 bg-white rounded-lg shadow-lg p-3 animate-bounce">
+              <Icon name="CheckCircle" class="h-6 w-6 text-green-500" />
+            </div>
+            
+            <div class="absolute -bottom-4 -left-4 bg-white rounded-lg shadow-lg p-3 animate-pulse">
+              <Icon name="Zap" class="h-6 w-6 text-yellow-500" />
+            </div>
+
+            <div class="absolute top-1/2 -left-8 bg-blue-500 text-white rounded-lg shadow-lg p-2 text-xs font-semibold animate-pulse animation-delay-1s">
+              TypeScript
+            </div>
+
+            <div class="absolute top-1/4 -right-8 bg-purple-500 text-white rounded-lg shadow-lg p-2 text-xs font-semibold animate-pulse animation-delay-2s">
+              React
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .animate-fade-in-up {
+    animation: fadeInUp 0.8s ease-out forwards;
+    opacity: 0;
+  }
+  
+  .animate-fade-in-left {
+    animation: fadeInLeft 1s ease-out forwards;
+    opacity: 0;
+  }
+  
+  .animation-delay-300ms { animation-delay: 0.3s; }
+  .animation-delay-600ms { animation-delay: 0.6s; }
+  .animation-delay-900ms { animation-delay: 0.9s; }
+  .animation-delay-1200ms { animation-delay: 1.2s; }
+  .animation-delay-1s { animation-delay: 1s; }
+  .animation-delay-2s { animation-delay: 2s; }
+  .animation-delay-4s { animation-delay: 4s; }
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fadeInLeft {
+    from {
+      opacity: 0;
+      transform: translateX(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+</style>

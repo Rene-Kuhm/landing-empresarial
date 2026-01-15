@@ -1,0 +1,29 @@
+{
+  "name": "Tecnodespegue - Agencia de Desarrollo Web",
+  "short_name": "Tecnodespegue",
+  "description": "Agencia de desarrollo web profesional en Eduardo Castex, La Pampa, Argentina. Transformamos ideas en soluciones digitales innovadoras.",
+  "theme_color": "#2563EB",
+  "background_color": "#ffffff",
+  "display": "standalone",
+  "scope": "/",
+  "start_url": "/",
+  "icons": [
+    {
+      "src": "/favicon-16x16.png",
+      "sizes": "16x16",
+      "type": "image/png"
+    },
+    {
+      "src": "/favicon-32x32.png", 
+      "sizes": "32x32",
+      "type": "image/png"
+    },
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ],
+  "categories": ["business", "technology", "productivity"],
+  "lang": "es-AR"
+}

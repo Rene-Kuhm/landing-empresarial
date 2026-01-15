@@ -13,7 +13,7 @@ const {
   ogImage = '/og-image.jpg',
 } = Astro.props;
 
-const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+const canonicalURL = Astro.site ? new URL(Astro.url.pathname, Astro.site) : Astro.url;
 ---
 
 <!doctype html>
@@ -33,14 +33,14 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
     <meta property="og:url" content={canonicalURL} />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
-    <meta property="og:image" content={new URL(ogImage, Astro.url)} />
+    <meta property="og:image" content={Astro.site ? new URL(ogImage, Astro.site) : ogImage} />
     
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
     <meta property="twitter:url" content={canonicalURL} />
     <meta property="twitter:title" content={title} />
     <meta property="twitter:description" content={description} />
-    <meta property="twitter:image" content={new URL(ogImage, Astro.url)} />
+    <meta property="twitter:image" content={Astro.site ? new URL(ogImage, Astro.site) : ogImage} />
     
     <!-- Favicon -->
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
@@ -61,7 +61,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
       "@type": "Organization",
       "name": "Agencia de Desarrollo Web",
       "url": canonicalURL,
-      "logo": new URL("/logo.png", Astro.url),
+      "logo": Astro.site ? new URL("/logo.png", Astro.site) : "/logo.png",
       "description": description,
       "sameAs": [
         "https://github.com/tu-usuario",

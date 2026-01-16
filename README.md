@@ -1,11 +1,14 @@
-# 🚀 Landing Empresarial - Agencia de Desarrollo Web
+# 🚀 Tecnodespegue - Agencia de Desarrollo Web Profesional
 
-> Landing page profesional y moderna construida con Astro, TypeScript y Tailwind CSS
+> Landing page premium para Tecnodespegue, agencia especializada en desarrollo web moderno con React, Next.js, Node.js y TypeScript
 
 [![Astro](https://img.shields.io/badge/Astro-5.16-orange?logo=astro)](https://astro.build/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.x-blue?logo=typescript)](https://www.typescriptlang.org/)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-4.x-38BDF8?logo=tailwind-css)](https://tailwindcss.com/)
+[![Biome](https://img.shields.io/badge/Biome-1.8-60A5FA?logo=biome)](https://biomejs.dev/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
+[![SEO Optimized](https://img.shields.io/badge/SEO-Optimized-brightgreen)](https://developers.google.com/search/docs)
+[![Accessibility](https://img.shields.io/badge/Accessibility-WCAG_AA-blue)](https://www.w3.org/WAI/WCAG2A-Conformance)
 
 ## ✨ Características
 
@@ -38,8 +41,8 @@
 
 ```bash
 # Clonar el repositorio
-git clone https://github.com/Rene-Kuhm/landing-empresarial.git
-cd landing-empresarial
+git clone https://github.com/tecnodespegue/landing-tecnodespegue.git
+cd landing-tecnodespegue
 
 # Instalar dependencias
 npm install
@@ -57,26 +60,38 @@ npm run preview
 ## 📂 Estructura del Proyecto
 
 ```
-📦 landing-empresarial/
+📦 landing-tecnodespegue/
 ├── 📁 public/
-│   ├── 🖼️ favicon.svg
-│   └── 🖼️ og-image.jpg
+│   ├── 🖼️ project-1.svg to project-6.svg  # Portfolio profesional
+│   ├── 🖼️ favicon.*                     # Favicons completos
+│   └── 📄 site.webmanifest               # PWA manifest
 ├── 📁 src/
 │   ├── 📁 components/
-│   │   ├── 🧩 Header.astro       # Navegación principal
-│   │   ├── 🧩 Hero.astro         # Sección hero
-│   │   ├── 🧩 Services.astro     # Servicios ofrecidos
-│   │   └── 🧩 Footer.astro       # Pie de página
+│   │   ├── 🧩 Header.astro               # Navegación premium
+│   │   ├── 🧩 Hero.astro                 # Hero con wow factor
+│   │   ├── 🧩 Services.astro             # Servicios diferenciados
+│   │   ├── 🧩 Portfolio.astro            # Portfolio con lazy loading
+│   │   ├── 🧩 Testimonials.astro         # Testimonios profesionales
+│   │   ├── 🧩 Contact.astro              # Contacto optimizado
+│   │   ├── 🧩 Footer.astro               # Footer completo
+│   │   ├── 🧩 DemoBanner.astro           # Banner demo
+│   │   └── 🧩 Icon.astro                 # Sistema de iconos
 │   ├── 📁 layouts/
-│   │   └── 📄 Layout.astro       # Layout principal con SEO
+│   │   └── 📄 Layout.astro               # Layout con SEO completo
 │   ├── 📁 pages/
-│   │   └── 📄 index.astro        # Página principal
+│   │   ├── 📄 index.astro                # Home page
+│   │   ├── 📄 servicios.astro            # Servicios detallados
+│   │   ├── 📄 proyectos.astro            # Portfolio expandido
+│   │   ├── 📄 nosotros.astro             # About us
+│   │   ├── 📄 testimonios.astro          # Testimonios
+│   │   └── 📄 *.astro                    # Páginas legales
 │   └── 📁 styles/
-│       └── 🎨 global.css         # Estilos globales
-├── ⚙️ astro.config.mjs           # Configuración Astro
-├── ⚙️ tailwind.config.mjs        # Configuración Tailwind
-├── ⚙️ tsconfig.json              # Configuración TypeScript
-└── ⚙️ biome.json                 # Configuración Biome
+│       └── 🎨 global.css                 # Paleta premium + utilities
+├── ⚙️ astro.config.mjs                   # Configuración Astro optimizada
+├── ⚙️ tailwind.config.mjs                # Tailwind con custom utilities
+├── ⚙️ tsconfig.json                      # TypeScript strict mode
+├── ⚙️ biome.json                         # Linting ultra-strict
+└── 📄 README.md                          # Documentación completa
 ```
 
 ## 🧩 Componentes
@@ -244,16 +259,28 @@ Este proyecto está bajo la Licencia MIT. Ver el archivo [LICENSE](LICENSE) para
 
 ---
 
-### 🎯 **Próximas Características**
+### ✅ **Características Implementadas**
 
-- [ ] 📧 Formulario de contacto funcional
-- [ ] 🖼️ Galería de proyectos con filtros
-- [ ] 👥 Sección de testimonios
-- [ ] 📝 Blog con contenido dinámico
-- [ ] 🌙 Modo oscuro
-- [ ] 🌐 Internacionalización (i18n)
-- [ ] 📊 Dashboard de analytics
-- [ ] 🔄 Animaciones con Framer Motion
+- [x] 🎨 **Diseño Premium** - Paleta de colores profesional con gradientes
+- [x] 📱 **Responsive Design** - Mobile-first con breakpoints consistentes
+- [x] ⚡ **Performance Optimizado** - Lazy loading, preloads, Core Web Vitals
+- [x] 🔍 **SEO Completo** - Meta tags, Open Graph, structured data
+- [x] ♿ **Accesibilidad WCAG** - ARIA labels, focus management, alt texts
+- [x] 🧪 **Code Quality** - Biome ultra-strict, TypeScript strict mode
+- [x] 📧 **Formulario de contacto** - Validación y UX optimizada
+- [x] 🖼️ **Portfolio Profesional** - 6 proyectos con imágenes custom
+- [x] 👥 **Testimonios Reales** - Fotos profesionales y datos realistas
+- [x] 🎯 **Demo Banner** - Indicador claro de versión demo
+
+### 🚀 **Próximas Características Planeadas**
+
+- [ ] 📝 Blog con MDX y contenido dinámico
+- [ ] 🌙 Modo oscuro con persistencia
+- [ ] 🌐 Internacionalización (i18n) - Español/Inglés
+- [ ] 📊 Dashboard de analytics integrado
+- [ ] 🔄 Animaciones avanzadas con Framer Motion
+- [ ] 🔔 Notificaciones push (PWA)
+- [ ] 📱 App móvil complementaria
 
 ### 🏆 **Inspiración y Agradecimientos**
 
@@ -264,6 +291,6 @@ Este proyecto está bajo la Licencia MIT. Ver el archivo [LICENSE](LICENSE) para
 
 ---
 
-**Hecho con ❤️ por [DevAgency](https://github.com/Rene-Kuhm)**
+**Hecho con ❤️ por [Tecnodespegue](https://github.com/tecnodespegue)**
 
-> 💼 ¿Necesitas una landing page custom para tu empresa? [Contáctanos](mailto:hola@devagency.es)
+> 💼 ¿Necesitas desarrollo web profesional para tu empresa? [Contáctanos](mailto:hola@tecnodespegue.com)

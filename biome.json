@@ -50,11 +50,28 @@
   },
   "javascript": {
     "formatter": {
-      "quoteStyle": "single",
-      "semicolons": "always",
-      "trailingCommas": "es5"
-    }
+      "semicolons": "asNeeded",
+      "quoteStyle": "single"
+    },
+    "globals": ["astro", "Astro"]
   },
+  "overrides": [
+    {
+      "include": ["*.astro"],
+      "linter": {
+        "rules": {
+          "style": {
+            "useImportType": "off"
+          },
+          "correctness": {
+            "noUndeclaredVariables": "off",
+            "noUnusedImports": "off",
+            "noUnusedVariables": "off"
+          }
+        }
+      }
+    }
+  ],
   "files": {
     "includes": [
       "**/src/**/*",

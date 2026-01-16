@@ -392,46 +392,22 @@ const categories = [
   document.addEventListener('DOMContentLoaded', function() {
     
     // Filter functionality
-    const filterButtons = document.querySelectorAll('.portfolio-filter');
+    const filterButtons = document.querySelectorAll('.filter-button');
     const projectCards = document.querySelectorAll('.project-card');
-    
-    filterButtons.forEach(button => {
-      button.addEventListener('click', () => {
-        const filter = button.getAttribute('data-filter');
-        
-        // Update active button
-        filterButtons.forEach(btn => {
-          btn.classList.remove('border-blue-500', 'text-blue-600', 'bg-blue-50');
-          btn.classList.add('border-gray-200', 'text-gray-600');
-        });
-        button.classList.add('border-blue-500', 'text-blue-600', 'bg-blue-50');
-        button.classList.remove('border-gray-200', 'text-gray-600');
-        
-        // Filter projects
-        projectCards.forEach(card => {
-          const category = card.getAttribute('data-category');
-          if (filter === 'all' || category === filter) {
-            card.style.display = 'block';
-            card.style.animation = 'fadeInUp 0.5s ease-out';
-          } else {
-            card.style.display = 'none';
-          }
-        });
-      });
-    });
 
-    // Set initial active state
-    filterButtons[0].classList.add('border-blue-500', 'text-blue-600', 'bg-blue-50');
-    filterButtons[0].classList.remove('border-gray-200', 'text-gray-600');
+    if (filterButtons.length > 0) {
+      (filterButtons[0] as HTMLElement).classList.add('border-blue-500', 'text-blue-600', 'bg-blue-50');
+      (filterButtons[0] as HTMLElement).classList.remove('border-gray-200', 'text-gray-600');
+    }
     
     // Modal functionality
-    const modal = document.getElementById('project-modal');
-    const modalContent = document.getElementById('modal-content');
-    const closeModal = document.getElementById('close-modal');
+    const modal = document.getElementById('project-modal') as HTMLElement | null;
+    const modalContent = document.getElementById('modal-content') as HTMLElement | null;
+    const closeModal = document.getElementById('close-modal') as HTMLElement | null;
     const viewDetailsButtons = document.querySelectorAll('.view-details');
     
-    const projectsData = {
-      1: {
+    const projectsData: {[key: string]: any} = {
+      "1": {
         title: 'EcoTech Solutions - Web App',
         client: 'EcoTech Solutions',
         description: 'Plataforma integral para gestión de procesos ambientales con dashboard en tiempo real y sistema de reportes automatizado.',
@@ -454,69 +430,90 @@ const categories = [
       // Add other projects here...
     };
 
-    function openModal(projectId) {
+    function openModal(projectId: string) {
       const project = projectsData[projectId];
       if (!project) return;
       
       // Populate modal content
-      document.getElementById('modal-title').textContent = project.title;
-      document.getElementById('modal-description').textContent = project.description;
-      document.getElementById('modal-client').textContent = project.client;
-      document.getElementById('modal-status').textContent = project.status;
-      document.getElementById('modal-testimonial').textContent = project.testimonial;
-      document.getElementById('modal-testimonial-client').textContent = project.client;
+      const modalTitle = document.getElementById('modal-title');
+      const modalDescription = document.getElementById('modal-description');
+      const modalClient = document.getElementById('modal-client');
+      const modalStatus = document.getElementById('modal-status');
+      const modalTestimonial = document.getElementById('modal-testimonial');
+      const modalTestimonialClient = document.getElementById('modal-testimonial-client');
+      
+      if (modalTitle) modalTitle.textContent = project.title;
+      if (modalDescription) modalDescription.textContent = project.description;
+      if (modalClient) modalClient.textContent = project.client;
+      if (modalStatus) modalStatus.textContent = project.status;
+      if (modalTestimonial) modalTestimonial.textContent = project.testimonial;
+      if (modalTestimonialClient) modalTestimonialClient.textContent = project.client;
       
       // Technologies
       const techContainer = document.getElementById('modal-technologies');
-      techContainer.innerHTML = '';
-      project.technologies.forEach(tech => {
-        const span = document.createElement('span');
-        span.className = 'bg-blue-100 text-blue-800 text-sm px-3 py-1 rounded-full';
-        span.textContent = tech;
-        techContainer.appendChild(span);
-      });
+      if (techContainer) {
+        techContainer.innerHTML = '';
+        project.technologies.forEach((tech: string) => {
+          const span = document.createElement('span');
+          span.className = 'bg-blue-100 text-blue-800 text-sm px-3 py-1 rounded-full';
+          span.textContent = tech;
+          techContainer.appendChild(span);
+        });
+      }
       
       // Features
       const featuresContainer = document.getElementById('modal-features');
-      featuresContainer.innerHTML = '';
-      project.features.forEach(feature => {
-        const li = document.createElement('li');
-        li.className = 'flex items-start text-gray-600';
-        li.innerHTML = `
-          <svg class="h-5 w-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-          </svg>
-          ${feature}
-        `;
-        featuresContainer.appendChild(li);
-      });
+      if (featuresContainer) {
+        featuresContainer.innerHTML = '';
+        project.features.forEach((feature: string) => {
+          const li = document.createElement('li');
+          li.className = 'flex items-start text-gray-600';
+          li.innerHTML = `
+            <svg class="h-5 w-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+            </svg>
+            ${feature}
+          `;
+          featuresContainer.appendChild(li);
+        });
+      }
       
       // Results
       const resultsContainer = document.getElementById('modal-results');
-      resultsContainer.innerHTML = '';
-      Object.values(project.results).forEach(result => {
-        const div = document.createElement('div');
-        div.className = 'text-center bg-white rounded-xl p-4 shadow-sm border border-gray-100';
-        div.innerHTML = `
-          <div class="text-2xl font-bold text-gray-900 mb-2">${result.value}</div>
-          <div class="text-sm text-gray-600">${result.label}</div>
-        `;
-        resultsContainer.appendChild(div);
-      });
+      if (resultsContainer) {
+        resultsContainer.innerHTML = '';
+        Object.values(project.results).forEach((result: any) => {
+          const div = document.createElement('div');
+          div.className = 'text-center bg-white rounded-xl p-4 shadow-sm border border-gray-100';
+          div.innerHTML = `
+            <div class="text-2xl font-bold text-gray-900 mb-2">${result.value}</div>
+            <div class="text-sm text-gray-600">${result.label}</div>
+          `;
+          resultsContainer.appendChild(div);
+        });
+      }
       
       // Show modal
-      modal.classList.remove('hidden');
-      setTimeout(() => {
-        modal.classList.remove('opacity-0');
-        modalContent.classList.remove('scale-95');
-      }, 10);
+      if (modal) {
+        modal.classList.remove('hidden');
+        setTimeout(() => {
+          if (modal) modal.classList.remove('opacity-0');
+          if (modalContent) modalContent.classList.remove('scale-95');
+        }, 10);
+      }
     }
 
     function closeModalHandler() {
-      modal.classList.add('opacity-0');
-      modalContent.classList.add('scale-95');
+      if (modal) {
+        modal.classList.add('opacity-0');
+      }
+      if (modalContent) {
+        modalContent.classList.add('scale-95');
+      }
       setTimeout(() => {
-        modal.classList.add('hidden');
+        if (modal) {
+          modal.classList.add('hidden');
+        }
       }, 300);
     }
 
@@ -524,21 +521,27 @@ const categories = [
     viewDetailsButtons.forEach(button => {
       button.addEventListener('click', () => {
         const projectId = button.getAttribute('data-project');
-        openModal(projectId);
+        if (projectId) {
+          openModal(projectId);
+        }
       });
     });
 
-    closeModal.addEventListener('click', closeModalHandler);
+    if (closeModal) {
+      closeModal.addEventListener('click', closeModalHandler);
+    }
     
-    modal.addEventListener('click', (e) => {
-      if (e.target === modal) {
-        closeModalHandler();
-      }
-    });
+    if (modal) {
+      modal.addEventListener('click', (e) => {
+        if (e.target === modal) {
+          closeModalHandler();
+        }
+      });
+    }
 
     // Escape key to close modal
     document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
+      if (e.key === 'Escape' && modal && !modal.classList.contains('hidden')) {
         closeModalHandler();
       }
     });

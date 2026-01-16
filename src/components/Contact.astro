@@ -276,11 +276,11 @@ import Icon from './Icon.astro';
             </p>
             <div class="grid grid-cols-2 gap-4 text-center">
               <div>
-                <div class="text-2xl font-bold text-yellow-400">< 24h</div>
+                <div class="text-2xl font-bold text-yellow-400">&lt; 24h</div>
                 <div class="text-sm text-gray-400">Respuesta inicial</div>
               </div>
               <div>
-                <div class="text-2xl font-bold text-yellow-400">< 48h</div>
+                <div class="text-2xl font-bold text-yellow-400">&lt; 48h</div>
                 <div class="text-sm text-gray-400">Propuesta detallada</div>
               </div>
             </div>
@@ -295,13 +295,13 @@ import Icon from './Icon.astro';
 <script>
   // Contact form handling
   document.addEventListener('DOMContentLoaded', function() {
-    const form = document.getElementById('contact-form');
-    const submitButton = form?.querySelector('button[type="submit"]');
-    const buttonText = document.getElementById('button-text');
-    const buttonIcon = document.getElementById('button-icon');
-    const formMessages = document.getElementById('form-messages');
-    const successMessage = document.getElementById('success-message');
-    const errorMessage = document.getElementById('error-message');
+    const form = document.getElementById('contact-form') as HTMLFormElement | null;
+    const submitButton = form?.querySelector('button[type="submit"]') as HTMLButtonElement | null;
+    const buttonText = document.getElementById('button-text') as HTMLElement | null;
+    const buttonIcon = document.getElementById('button-icon') as HTMLElement | null;
+    const formMessages = document.getElementById('form-messages') as HTMLElement | null;
+    const successMessage = document.getElementById('success-message') as HTMLElement | null;
+    const errorMessage = document.getElementById('error-message') as HTMLElement | null;
 
     if (!form) return;
 
@@ -325,7 +325,7 @@ import Icon from './Icon.astro';
 
       try {
         // Get form data
-        const formData = new FormData(form);
+        const formData = new FormData(form as HTMLFormElement);
         const data = Object.fromEntries(formData);
 
         // Simulate form submission (replace with actual endpoint)
@@ -342,7 +342,7 @@ import Icon from './Icon.astro';
         }
 
         // Reset form
-        form.reset();
+        (form as HTMLFormElement).reset();
 
       } catch (error) {
         console.error('Form submission error:', error);

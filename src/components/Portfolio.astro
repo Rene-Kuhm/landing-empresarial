@@ -216,7 +216,13 @@ const categories = [
           <!-- Project Image -->
           <div class="relative overflow-hidden group">
             <div class="aspect-video">
-              <img src={project.image} alt={project.title} class="w-full h-full object-cover" />
+              <img
+                src={project.image}
+                alt={project.title}
+                class="w-full h-full object-cover"
+                loading="lazy"
+                decoding="async"
+              />
             </div>
             
             <!-- Image Overlay -->

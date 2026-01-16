@@ -7,17 +7,27 @@
       "recommended": true,
       "suspicious": {
         "noExplicitAny": "error",
-        "noImplicitAnyLet": "error"
+        "noImplicitAnyLet": "error",
+        "noArrayIndexKey": "warn"
       },
       "correctness": {
-        "noUnusedVariables": "off",
-        "noUnusedImports": "warn"
+        "noUnusedVariables": "warn",
+        "noUnusedImports": "error",
+        "useExhaustiveDependencies": "warn"
       },
       "style": {
-        "useConst": "error"
+        "useConst": "error",
+        "useTemplate": "error",
+        "noNonNullAssertion": "warn"
       },
       "complexity": {
-        "noImportantStyles": "off"
+        "noImportantStyles": "off",
+        "noVoid": "error"
+      },
+      "a11y": {
+        "useAltText": "error",
+        "useKeyWithClickEvents": "error",
+        "useKeyWithMouseEvents": "warn"
       }
     }
   },

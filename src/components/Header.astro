@@ -1,5 +1,5 @@
 ---
-import { Icon } from '@lucide/astro';
+import Icon from './Icon.astro';
 ---
 
 <header class="fixed top-0 w-full bg-white/90 backdrop-blur-md z-50 border-b border-gray-100">
@@ -7,25 +7,27 @@ import { Icon } from '@lucide/astro';
     <div class="flex justify-between items-center h-16">
       <!-- Logo -->
       <div class="flex-shrink-0">
-        <a href="/" class="flex items-center space-x-2 text-xl font-bold text-gray-900 hover:text-blue-600 transition-colors">
-          <Icon name="Code" class="h-8 w-8 text-blue-600" />
-          <span>Tecnodespegue</span>
+        <a href="/" class="flex items-center space-x-2 text-xl md:text-2xl font-bold text-gray-900 hover:text-blue-600 transition-colors leading-none">
+          <img src="/logo.svg" alt="Tecnodespegue" class="h-10 w-auto" />
         </a>
       </div>
 
       <!-- Desktop Navigation -->
       <div class="hidden md:block">
         <div class="ml-10 flex items-baseline space-x-8">
-          <a href="#servicios" class="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors">
+          <a href="/servicios" class="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-semibold transition-colors leading-none tracking-wide">
             Servicios
           </a>
-          <a href="#proyectos" class="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors">
+          <a href="/proyectos" class="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-semibold transition-colors leading-none tracking-wide">
             Proyectos
           </a>
-          <a href="#nosotros" class="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors">
+          <a href="/nosotros" class="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-semibold transition-colors leading-none tracking-wide">
             Nosotros
           </a>
-          <a href="#contacto" class="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors">
+          <a href="/testimonios" class="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-semibold transition-colors leading-none tracking-wide">
+            Testimonios
+          </a>
+          <a href="/#contacto" class="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-semibold transition-colors leading-none tracking-wide">
             Contacto
           </a>
         </div>
@@ -33,11 +35,11 @@ import { Icon } from '@lucide/astro';
 
       <!-- CTA Button -->
       <div class="hidden md:block">
-        <a href="#contacto" 
-           class="inline-flex items-center px-6 py-2 border border-transparent text-sm font-medium rounded-full text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-all duration-200 shadow-lg hover:shadow-xl">
-          Empezar Proyecto
-          <Icon name="ArrowRight" class="ml-2 -mr-1 h-4 w-4" />
-        </a>
+         <a href="#contacto"
+            class="inline-flex items-center px-6 py-3 border border-transparent text-sm font-semibold rounded-xl text-white bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 leading-none tracking-wide">
+           Empezar Proyecto
+           <Icon name="ArrowRight" class="ml-2 -mr-1 h-4 w-4" />
+         </a>
       </div>
 
       <!-- Mobile menu button -->
@@ -56,16 +58,19 @@ import { Icon } from '@lucide/astro';
     <!-- Mobile menu -->
     <div class="mobile-menu hidden md:hidden" id="mobile-menu">
       <div class="px-2 pt-2 pb-3 space-y-1 bg-white border-t border-gray-100">
-        <a href="#servicios" class="mobile-menu-item block px-3 py-2 text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-md transition-colors">
+        <a href="/servicios" class="mobile-menu-item block px-3 py-2 text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-md transition-colors">
           Servicios
         </a>
-        <a href="#proyectos" class="mobile-menu-item block px-3 py-2 text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-md transition-colors">
+        <a href="/proyectos" class="mobile-menu-item block px-3 py-2 text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-md transition-colors">
           Proyectos
         </a>
-        <a href="#nosotros" class="mobile-menu-item block px-3 py-2 text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-md transition-colors">
+        <a href="/nosotros" class="mobile-menu-item block px-3 py-2 text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-md transition-colors">
           Nosotros
         </a>
-        <a href="#contacto" class="mobile-menu-item block px-3 py-2 text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-md transition-colors">
+        <a href="/testimonios" class="mobile-menu-item block px-3 py-2 text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-md transition-colors">
+          Testimonios
+        </a>
+        <a href="/#contacto" class="mobile-menu-item block px-3 py-2 text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-md transition-colors">
           Contacto
         </a>
         <div class="pt-4">

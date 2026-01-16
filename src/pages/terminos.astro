@@ -1,0 +1,252 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout 
+  title="Términos de Uso - Tecnodespegue"
+  description="Términos y condiciones de uso de los servicios de Tecnodespegue. Conoce tus derechos y obligaciones."
+  keywords="términos uso, condiciones servicio, contrato, obligaciones, derechos"
+>
+  <main class="min-h-screen bg-gray-50 py-20">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl">
+      
+      <!-- Header -->
+      <header class="text-center mb-12">
+        <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+          Términos de Uso
+        </h1>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+          Estos términos rigen el uso de nuestros servicios. Al contratar nuestros servicios, 
+          aceptas estos términos y condiciones.
+        </p>
+        <p class="text-sm text-gray-500 mt-4">
+          Última actualización: {new Date().toLocaleDateString('es-ES', { 
+            year: 'numeric', 
+            month: 'long', 
+            day: 'numeric' 
+          })}
+        </p>
+      </header>
+
+      <!-- Content -->
+      <div class="bg-white rounded-2xl shadow-lg p-8 md:p-12">
+        
+        <!-- Aceptación de términos -->
+        <section class="mb-10">
+          <h2 class="text-2xl font-bold text-gray-900 mb-4">1. Aceptación de Términos</h2>
+          <div class="prose prose-lg max-w-none text-gray-700">
+            <p class="mb-4">
+              Al contratar los servicios de <strong>Tecnodespegue</strong> o utilizar nuestro sitio web, 
+              aceptas estar legalmente vinculado por estos términos de uso. Si no estás de acuerdo, 
+              no utilices nuestros servicios.
+            </p>
+          </div>
+        </section>
+
+        <!-- Servicios ofrecidos -->
+        <section class="mb-10">
+          <h2 class="text-2xl font-bold text-gray-900 mb-4">2. Servicios Ofrecidos</h2>
+          <div class="prose prose-lg max-w-none text-gray-700">
+            <p class="mb-4">Tecnodespegue ofrece servicios de:</p>
+            <ul class="list-disc pl-6">
+              <li>Desarrollo de sitios web y aplicaciones</li>
+              <li>Consultoría tecnológica</li>
+              <li>Mantenimiento y soporte técnico</li>
+              <li>Optimización y mejora de sistemas existentes</li>
+              <li>Servicios de hosting y dominio (como intermediario)</li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- Proceso de contratación -->
+        <section class="mb-10">
+          <h2 class="text-2xl font-bold text-gray-900 mb-4">3. Proceso de Contratación</h2>
+          <div class="prose prose-lg max-w-none text-gray-700">
+            <h3 class="text-lg font-semibold mb-3">Cotización y Propuesta</h3>
+            <ul class="list-disc pl-6 mb-6">
+              <li>Todas las cotizaciones son válidas por 30 días</li>
+              <li>Los precios pueden variar según el alcance del proyecto</li>
+              <li>Se requiere un depósito del 50% para iniciar el proyecto</li>
+              <li>El saldo se paga contra entrega del proyecto</li>
+            </ul>
+
+            <h3 class="text-lg font-semibold mb-3">Modificaciones del Proyecto</h3>
+            <ul class="list-disc pl-6">
+              <li>Cambios en el alcance pueden generar costos adicionales</li>
+              <li>Las modificaciones deben ser aprobadas por escrito</li>
+              <li>Los cambios pueden afectar los tiempos de entrega</li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- Responsabilidades del cliente -->
+        <section class="mb-10">
+          <h2 class="text-2xl font-bold text-gray-900 mb-4">4. Responsabilidades del Cliente</h2>
+          <div class="prose prose-lg max-w-none text-gray-700">
+            <ul class="list-disc pl-6">
+              <li>Proporcionar información y materiales necesarios en tiempo y forma</li>
+              <li>Revisar y aprobar entregables en los plazos acordados</li>
+              <li>Realizar los pagos según lo acordado</li>
+              <li>Proporcionar accesos necesarios (hosting, dominios, cuentas)</li>
+              <li>Respetar los derechos de propiedad intelectual</li>
+              <li>Usar los servicios de manera legal y ética</li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- Responsabilidades de Tecnodespegue -->
+        <section class="mb-10">
+          <h2 class="text-2xl font-bold text-gray-900 mb-4">5. Nuestras Responsabilidades</h2>
+          <div class="prose prose-lg max-w-none text-gray-700">
+            <ul class="list-disc pl-6">
+              <li>Entregar los proyectos según especificaciones acordadas</li>
+              <li>Cumplir con los plazos establecidos (sujeto a colaboración del cliente)</li>
+              <li>Proporcionar soporte técnico durante el período acordado</li>
+              <li>Mantener la confidencialidad de la información del cliente</li>
+              <li>Seguir las mejores prácticas de desarrollo y seguridad</li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- Propiedad intelectual -->
+        <section class="mb-10">
+          <h2 class="text-2xl font-bold text-gray-900 mb-4">6. Propiedad Intelectual</h2>
+          <div class="prose prose-lg max-w-none text-gray-700">
+            <h3 class="text-lg font-semibold mb-3">Código Personalizado</h3>
+            <p class="mb-4">
+              El código desarrollado específicamente para el cliente se transfiere al cliente 
+              una vez completado el pago total del proyecto.
+            </p>
+
+            <h3 class="text-lg font-semibold mb-3">Código Base y Librerías</h3>
+            <p class="mb-4">
+              Tecnodespegue conserva los derechos sobre:
+            </p>
+            <ul class="list-disc pl-6 mb-6">
+              <li>Frameworks y librerías propias</li>
+              <li>Metodologías y procesos de desarrollo</li>
+              <li>Conocimientos técnicos generales</li>
+            </ul>
+
+            <h3 class="text-lg font-semibold mb-3">Contenido del Cliente</h3>
+            <p>
+              El cliente conserva todos los derechos sobre su contenido (textos, imágenes, 
+              marca, etc.) y nos concede licencia para usarlo en el desarrollo del proyecto.
+            </p>
+          </div>
+        </section>
+
+        <!-- Garantía y soporte -->
+        <section class="mb-10">
+          <h2 class="text-2xl font-bold text-gray-900 mb-4">7. Garantía y Soporte</h2>
+          <div class="prose prose-lg max-w-none text-gray-700">
+            <h3 class="text-lg font-semibold mb-3">Garantía</h3>
+            <ul class="list-disc pl-6 mb-6">
+              <li>90 días de garantía contra defectos de programación</li>
+              <li>Corrección de errores sin costo adicional durante el período de garantía</li>
+              <li>No incluye nuevas funcionalidades o modificaciones de alcance</li>
+            </ul>
+
+            <h3 class="text-lg font-semibold mb-3">Soporte Técnico</h3>
+            <ul class="list-disc pl-6">
+              <li>30 días de soporte técnico gratuito post-entrega</li>
+              <li>Consultas técnicas básicas incluidas</li>
+              <li>Soporte extendido disponible bajo contrato separado</li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- Limitaciones de responsabilidad -->
+        <section class="mb-10">
+          <h2 class="text-2xl font-bold text-gray-900 mb-4">8. Limitaciones de Responsabilidad</h2>
+          <div class="prose prose-lg max-w-none text-gray-700">
+            <p class="mb-4">Tecnodespegue no será responsable por:</p>
+            <ul class="list-disc pl-6 mb-6">
+              <li>Daños indirectos, incidentales o consecuenciales</li>
+              <li>Pérdida de beneficios o datos</li>
+              <li>Interrupción del negocio</li>
+              <li>Actos de terceros (hosting, proveedores externos)</li>
+              <li>Fuerza mayor (catástrofes, pandemias, etc.)</li>
+            </ul>
+            <p>
+              La responsabilidad máxima se limita al monto total pagado por el proyecto específico.
+            </p>
+          </div>
+        </section>
+
+        <!-- Cancelación y reembolsos -->
+        <section class="mb-10">
+          <h2 class="text-2xl font-bold text-gray-900 mb-4">9. Cancelación y Reembolsos</h2>
+          <div class="prose prose-lg max-w-none text-gray-700">
+            <h3 class="text-lg font-semibold mb-3">Cancelación por el Cliente</h3>
+            <ul class="list-disc pl-6 mb-6">
+              <li>Posible con aviso de 7 días</li>
+              <li>Se cobrarán las horas ya trabajadas</li>
+              <li>El depósito no es reembolsable si ya se inició el trabajo</li>
+            </ul>
+
+            <h3 class="text-lg font-semibold mb-3">Cancelación por Tecnodespegue</h3>
+            <p>
+              Podemos cancelar el contrato si el cliente incumple sus obligaciones, 
+              con reembolso proporcional de pagos no devengados.
+            </p>
+          </div>
+        </section>
+
+        <!-- Confidencialidad -->
+        <section class="mb-10">
+          <h2 class="text-2xl font-bold text-gray-900 mb-4">10. Confidencialidad</h2>
+          <div class="prose prose-lg max-w-none text-gray-700">
+            <p class="mb-4">
+              Tecnodespegue se compromete a mantener en estricta confidencialidad 
+              toda la información del cliente recibida durante el proyecto:
+            </p>
+            <ul class="list-disc pl-6">
+              <li>Información comercial y estratégica</li>
+              <li>Datos técnicos y de sistemas</li>
+              <li>Información de usuarios y clientes</li>
+              <li>Cualquier información marcada como confidencial</li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- Ley aplicable -->
+        <section class="mb-10">
+          <h2 class="text-2xl font-bold text-gray-900 mb-4">11. Ley Aplicable y Jurisdicción</h2>
+          <div class="prose prose-lg max-w-none text-gray-700">
+            <p>
+              Estos términos se rigen por las leyes de la <strong>República Argentina</strong>. 
+              Cualquier disputa será resuelta por los tribunales competentes de 
+              <strong>Eduardo Castex, La Pampa</strong>.
+            </p>
+          </div>
+        </section>
+
+        <!-- Contacto -->
+        <section>
+          <h2 class="text-2xl font-bold text-gray-900 mb-4">12. Contacto</h2>
+          <div class="prose prose-lg max-w-none text-gray-700">
+            <p class="mb-4">Para consultas sobre estos términos:</p>
+            <div class="bg-gray-50 p-6 rounded-lg">
+              <p><strong>Email:</strong> info@tecnodespegue.com.ar</p>
+              <p><strong>Teléfono:</strong> +54 2954 123 456</p>
+              <p><strong>Dirección:</strong> Eduardo Castex, La Pampa, Argentina</p>
+            </div>
+          </div>
+        </section>
+
+      </div>
+
+      <!-- Back to home -->
+      <div class="text-center mt-12">
+        <a 
+          href="/" 
+          class="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-xl hover:bg-blue-700 transition-colors"
+        >
+          ← Volver al Inicio
+        </a>
+      </div>
+
+    </div>
+  </main>
+</Layout>

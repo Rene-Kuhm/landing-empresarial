@@ -1,0 +1,207 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout 
+  title="Política de Privacidad - Tecnodespegue"
+  description="Conoce cómo Tecnodespegue protege y maneja tu información personal. Política de privacidad completa y transparente."
+  keywords="política privacidad, protección datos, RGPD, información personal"
+>
+  <main class="min-h-screen bg-gray-50 py-20">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl">
+      
+      <!-- Header -->
+      <header class="text-center mb-12">
+        <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+          Política de Privacidad
+        </h1>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+          En Tecnodespegue valoramos tu privacidad y nos comprometemos a proteger tu información personal.
+        </p>
+        <p class="text-sm text-gray-500 mt-4">
+          Última actualización: {new Date().toLocaleDateString('es-ES', { 
+            year: 'numeric', 
+            month: 'long', 
+            day: 'numeric' 
+          })}
+        </p>
+      </header>
+
+      <!-- Content -->
+      <div class="bg-white rounded-2xl shadow-lg p-8 md:p-12">
+        
+        <!-- Información que recopilamos -->
+        <section class="mb-10">
+          <h2 class="text-2xl font-bold text-gray-900 mb-4">1. Información que Recopilamos</h2>
+          <div class="prose prose-lg max-w-none text-gray-700">
+            <h3 class="text-lg font-semibold mb-3">Información Personal</h3>
+            <ul class="list-disc pl-6 mb-6">
+              <li>Nombre y apellidos</li>
+              <li>Dirección de correo electrónico</li>
+              <li>Número de teléfono</li>
+              <li>Información de la empresa</li>
+              <li>Detalles del proyecto</li>
+            </ul>
+
+            <h3 class="text-lg font-semibold mb-3">Información Técnica</h3>
+            <ul class="list-disc pl-6">
+              <li>Dirección IP</li>
+              <li>Tipo de navegador</li>
+              <li>Páginas visitadas</li>
+              <li>Tiempo de navegación</li>
+              <li>Datos de cookies</li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- Cómo usamos la información -->
+        <section class="mb-10">
+          <h2 class="text-2xl font-bold text-gray-900 mb-4">2. Cómo Usamos tu Información</h2>
+          <div class="prose prose-lg max-w-none text-gray-700">
+            <ul class="list-disc pl-6">
+              <li>Proporcionar y mejorar nuestros servicios</li>
+              <li>Comunicarnos contigo sobre proyectos</li>
+              <li>Enviar actualizaciones y newsletters (si te suscribiste)</li>
+              <li>Analizar el uso del sitio web</li>
+              <li>Cumplir con obligaciones legales</li>
+              <li>Proteger contra fraude y abuso</li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- Compartir información -->
+        <section class="mb-10">
+          <h2 class="text-2xl font-bold text-gray-900 mb-4">3. Compartir Información</h2>
+          <div class="prose prose-lg max-w-none text-gray-700">
+            <p class="mb-4">
+              <strong>No vendemos, alquilamos ni compartimos tu información personal</strong> con terceros, 
+              excepto en los siguientes casos:
+            </p>
+            <ul class="list-disc pl-6">
+              <li>Con tu consentimiento explícito</li>
+              <li>Con proveedores de servicios que nos ayudan (hosting, analytics)</li>
+              <li>Cuando sea requerido por ley</li>
+              <li>Para proteger nuestros derechos legales</li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- Cookies -->
+        <section class="mb-10">
+          <h2 class="text-2xl font-bold text-gray-900 mb-4">4. Cookies y Tecnologías Similares</h2>
+          <div class="prose prose-lg max-w-none text-gray-700">
+            <p class="mb-4">Utilizamos cookies para:</p>
+            <ul class="list-disc pl-6 mb-4">
+              <li><strong>Esenciales:</strong> Funcionamiento básico del sitio</li>
+              <li><strong>Analíticas:</strong> Google Analytics para entender el uso</li>
+              <li><strong>Funcionales:</strong> Recordar preferencias</li>
+            </ul>
+            <p>
+              Puedes controlar las cookies desde tu navegador. 
+              Consulta nuestra <a href="/cookies" class="text-blue-600 hover:text-blue-800">Política de Cookies</a> 
+              para más detalles.
+            </p>
+          </div>
+        </section>
+
+        <!-- Seguridad -->
+        <section class="mb-10">
+          <h2 class="text-2xl font-bold text-gray-900 mb-4">5. Seguridad de Datos</h2>
+          <div class="prose prose-lg max-w-none text-gray-700">
+            <p class="mb-4">Implementamos medidas de seguridad técnicas y organizativas:</p>
+            <ul class="list-disc pl-6">
+              <li>Encriptación SSL/TLS</li>
+              <li>Acceso restringido a datos</li>
+              <li>Copias de seguridad regulares</li>
+              <li>Auditorías de seguridad</li>
+              <li>Capacitación del personal</li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- Derechos del usuario -->
+        <section class="mb-10">
+          <h2 class="text-2xl font-bold text-gray-900 mb-4">6. Tus Derechos</h2>
+          <div class="prose prose-lg max-w-none text-gray-700">
+            <p class="mb-4">Tienes derecho a:</p>
+            <ul class="list-disc pl-6 mb-4">
+              <li><strong>Acceso:</strong> Solicitar copia de tus datos</li>
+              <li><strong>Rectificación:</strong> Corregir datos incorrectos</li>
+              <li><strong>Supresión:</strong> Eliminar tus datos (derecho al olvido)</li>
+              <li><strong>Portabilidad:</strong> Transferir tus datos</li>
+              <li><strong>Oposición:</strong> Oponerte al procesamiento</li>
+              <li><strong>Limitación:</strong> Restringir el procesamiento</li>
+            </ul>
+            <p>
+              Para ejercer estos derechos, contáctanos en: 
+              <a href="mailto:privacidad@tecnodespegue.com.ar" class="text-blue-600 hover:text-blue-800">
+                privacidad@tecnodespegue.com.ar
+              </a>
+            </p>
+          </div>
+        </section>
+
+        <!-- Retención de datos -->
+        <section class="mb-10">
+          <h2 class="text-2xl font-bold text-gray-900 mb-4">7. Retención de Datos</h2>
+          <div class="prose prose-lg max-w-none text-gray-700">
+            <ul class="list-disc pl-6">
+              <li><strong>Datos de contacto:</strong> Hasta que solicites eliminarlos</li>
+              <li><strong>Datos de proyectos:</strong> 5 años después de completar el proyecto</li>
+              <li><strong>Datos analíticos:</strong> 26 meses (Google Analytics)</li>
+              <li><strong>Comunicaciones:</strong> 3 años desde última interacción</li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- Cambios en la política -->
+        <section class="mb-10">
+          <h2 class="text-2xl font-bold text-gray-900 mb-4">8. Cambios en esta Política</h2>
+          <div class="prose prose-lg max-w-none text-gray-700">
+            <p>
+              Podemos actualizar esta política ocasionalmente. Te notificaremos de cambios significativos 
+              por email o mediante un aviso prominente en nuestro sitio web.
+            </p>
+          </div>
+        </section>
+
+        <!-- Contacto -->
+        <section class="mb-10">
+          <h2 class="text-2xl font-bold text-gray-900 mb-4">9. Contacto</h2>
+          <div class="prose prose-lg max-w-none text-gray-700">
+            <p class="mb-4">Si tienes preguntas sobre esta política:</p>
+            <div class="bg-gray-50 p-6 rounded-lg">
+              <p><strong>Email:</strong> privacidad@tecnodespegue.com.ar</p>
+              <p><strong>Teléfono:</strong> +54 2954 123 456</p>
+              <p><strong>Dirección:</strong> Eduardo Castex, La Pampa, Argentina</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Marco legal -->
+        <section>
+          <h2 class="text-2xl font-bold text-gray-900 mb-4">10. Marco Legal</h2>
+          <div class="prose prose-lg max-w-none text-gray-700">
+            <p>
+              Esta política cumple con la <strong>Ley de Protección de Datos Personales de Argentina 
+              (Ley 25.326)</strong> y el <strong>Reglamento General de Protección de Datos (RGPD)</strong> 
+              de la Unión Europea.
+            </p>
+          </div>
+        </section>
+
+      </div>
+
+      <!-- Back to home -->
+      <div class="text-center mt-12">
+        <a 
+          href="/" 
+          class="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-xl hover:bg-blue-700 transition-colors"
+        >
+          ← Volver al Inicio
+        </a>
+      </div>
+
+    </div>
+  </main>
+</Layout>

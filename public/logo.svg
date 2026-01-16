@@ -1,0 +1,13 @@
+<svg width="200" height="40" viewBox="0 0 200 40" xmlns="http://www.w3.org/2000/svg">
+  <!-- Icon -->
+  <g transform="translate(4, 8)">
+    <!-- Rocket icon -->
+    <path d="M12 2L13.41 8.59L20 10L13.41 11.41L12 18L10.59 11.41L4 10L10.59 8.59L12 2Z" fill="#2563EB"/>
+    <circle cx="12" cy="18" r="2" fill="#2563EB" opacity="0.6"/>
+  </g>
+  
+  <!-- Text -->
+  <text x="32" y="26" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#1f2937">
+    Tecnodespegue
+  </text>
+</svg>

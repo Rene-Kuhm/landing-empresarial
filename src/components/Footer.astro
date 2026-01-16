@@ -1,5 +1,5 @@
 ---
-import { Icon } from '@lucide/astro';
+import Icon from './Icon.astro';
 
 const currentYear = new Date().getFullYear();
 ---
@@ -14,11 +14,10 @@ const currentYear = new Date().getFullYear();
         <!-- Company info -->
         <div class="lg:col-span-1">
           <div class="flex items-center space-x-2 mb-6">
-            <Icon name="Code" class="h-8 w-8 text-blue-400" />
-            <span class="text-2xl font-bold">Tecnodespegue</span>
+            <img src="/logo.svg" alt="Tecnodespegue" class="h-8 w-auto brightness-0 invert" />
           </div>
-          <p class="text-gray-300 mb-6 leading-relaxed">
-            Transformamos ideas en soluciones digitales innovadoras. 
+          <p class="text-gray-300 mb-6 leading-[1.7] text-base">
+            Transformamos ideas en soluciones digitales innovadoras.
             Tu éxito es nuestra misión.
           </p>
           <div class="flex space-x-4">
@@ -39,31 +38,31 @@ const currentYear = new Date().getFullYear();
 
         <!-- Services -->
         <div>
-          <h3 class="text-lg font-semibold mb-6">Servicios</h3>
+          <h3 class="text-lg font-bold mb-6 text-white leading-none tracking-wide">Servicios</h3>
           <ul class="space-y-3">
-            <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Desarrollo Web</a></li>
-            <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Apps Móviles</a></li>
-            <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Backend & APIs</a></li>
-            <li><a href="#" class="text-gray-300 hover:text-white transition-colors">DevOps & Cloud</a></li>
-            <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Consultoría</a></li>
+            <li><a href="/servicios" class="text-gray-300 hover:text-white transition-colors">Desarrollo Web</a></li>
+            <li><a href="/servicios" class="text-gray-300 hover:text-white transition-colors">Apps Móviles</a></li>
+            <li><a href="/servicios" class="text-gray-300 hover:text-white transition-colors">Backend & APIs</a></li>
+            <li><a href="/servicios" class="text-gray-300 hover:text-white transition-colors">DevOps & Cloud</a></li>
+            <li><a href="/servicios" class="text-gray-300 hover:text-white transition-colors">Consultoría</a></li>
           </ul>
         </div>
 
         <!-- Company -->
         <div>
-          <h3 class="text-lg font-semibold mb-6">Empresa</h3>
+          <h3 class="text-lg font-bold mb-6 text-white leading-none tracking-wide">Empresa</h3>
           <ul class="space-y-3">
-            <li><a href="#nosotros" class="text-gray-300 hover:text-white transition-colors">Nosotros</a></li>
-            <li><a href="#proyectos" class="text-gray-300 hover:text-white transition-colors">Proyectos</a></li>
-            <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Testimonios</a></li>
-            <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Blog</a></li>
-            <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Carreras</a></li>
+            <li><a href="/nosotros" class="text-gray-300 hover:text-white transition-colors">Nosotros</a></li>
+            <li><a href="/proyectos" class="text-gray-300 hover:text-white transition-colors">Proyectos</a></li>
+            <li><a href="/testimonios" class="text-gray-300 hover:text-white transition-colors">Testimonios</a></li>
+            <li><a href="/#contacto" class="text-gray-300 hover:text-white transition-colors">Contacto</a></li>
+            <li><a href="/servicios" class="text-gray-300 hover:text-white transition-colors">Servicios</a></li>
           </ul>
         </div>
 
         <!-- Contact -->
         <div>
-          <h3 class="text-lg font-semibold mb-6">Contacto</h3>
+          <h3 class="text-lg font-bold mb-6 text-white leading-none tracking-wide">Contacto</h3>
           <ul class="space-y-4">
             <li class="flex items-start space-x-3">
               <Icon name="MapPin" class="h-5 w-5 text-blue-400 mt-1 flex-shrink-0" />

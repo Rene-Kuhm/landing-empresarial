@@ -1,0 +1,40 @@
+---
+// Demo Banner Component
+---
+
+<div class="bg-gradient-to-r from-blue-600 via-purple-600 to-blue-700 text-white py-2 px-4 text-center text-sm font-medium relative overflow-hidden">
+  <!-- Animated background elements -->
+  <div class="absolute inset-0 opacity-10">
+    <div class="absolute top-0 left-0 w-32 h-32 bg-white rounded-full -translate-x-16 -translate-y-16 animate-pulse"></div>
+    <div class="absolute top-0 right-0 w-24 h-24 bg-white rounded-full translate-x-12 -translate-y-12 animate-pulse animation-delay-2s"></div>
+  </div>
+
+  <!-- Content -->
+  <div class="relative z-10 flex items-center justify-center space-x-2">
+    <div class="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
+    <span class="font-semibold tracking-wide">DISEÑO DEMO</span>
+    <span class="hidden sm:inline">|</span>
+    <span class="hidden sm:inline text-blue-100">Tecnodespegue - Agencia de Desarrollo Web Profesional</span>
+    <div class="w-2 h-2 bg-green-400 rounded-full animate-pulse animation-delay-1s"></div>
+  </div>
+
+  <!-- Close button (optional) -->
+  <button
+    class="absolute right-4 top-1/2 transform -translate-y-1/2 text-white/70 hover:text-white transition-colors"
+    onclick="this.parentElement.style.display='none'"
+    aria-label="Cerrar banner"
+  >
+    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+    </svg>
+  </button>
+</div>
+
+<style>
+  .animation-delay-1s {
+    animation-delay: 1s;
+  }
+  .animation-delay-2s {
+    animation-delay: 2s;
+  }
+</style>
